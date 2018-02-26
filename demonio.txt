@@ -1,0 +1,38 @@
+sudo touch /etc/systemd/system/name.service
+sudo chmod 664 /etc/systemd/system/name.service
+sudo nano /etc/systemd/system/name.service
+
+
+
+
+
+
+
+
+*****
+La directiva ExecStart establece el script o comando que se va a ejecutar.
+*****
+[Unit]
+Description=servicio de ejemplo
+After=network.target mysql.service
+
+[Service]
+User=www-data
+ExecStart=/ruta/script/demonio
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+
+
+
+**********
+systemctl enable name.service
+systemctl disable name.service
+
+sudo systemctl start name.service
