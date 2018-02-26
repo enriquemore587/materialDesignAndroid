@@ -10,7 +10,7 @@ sudo nano /etc/systemd/system/name.service
 
 
 *****
-La directiva ExecStart establece el script o comando que se va a ejecutar.
+ExecStart ==>> script o comando.
 *****
 [Unit]
 Description=servicio de ejemplo
